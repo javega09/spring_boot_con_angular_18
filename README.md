@@ -1,18 +1,23 @@
-🌐 spring_boot_con_angular_18
-Aplicación web para gestión de restaurantes, desarrollada con Angular 18 en el frontend y Spring Boot 3.1.4 en el backend.
+# 🌐 spring_boot_con_angular_18
 
-📦 Tecnologías utilizadas
-Frontend: Angular 18, TypeScript, RxJS, Bootstrap
+Aplicación web para gestión de restaurantes, desarrollada con **Angular 18** en el frontend y **Spring Boot 3.1.4** en el backend.
 
-Backend: Spring Boot, Java 17, HikariCP, JPA, MySQL
+---
 
-Herramientas: Maven, Git, GitHub, Spring Tool Suite, Visual Studio Code
+## 📦 Tecnologías utilizadas
 
-🚀 Instalación y ejecución
-🔧 Backend (Spring Boot)
-Clona el repositorio:
+**Frontend**: Angular 18, TypeScript, RxJS, Bootstrap  
+**Backend**: Spring Boot, Java 17, HikariCP, JPA, MySQL  
+**Herramientas**: Maven, Git, GitHub, Spring Tool Suite, Visual Studio Code
 
-bash
+---
+
+## 🚀 Instalación y ejecución
+
+### 🔧 Backend (Spring Boot)
+
+Clona el repositorio:  
+```bash
 git clone https://github.com/javega09/spring_boot_con_angular_18.git
 Entra en la carpeta del backend:
 
@@ -21,8 +26,8 @@ cd restaurantemalagaalumno
 Crea un archivo .env en la raíz con tus credenciales:
 
 env
-DB_URL=jdbc:mysql://<host>:<port>/<database>
-DB_USERNAME=<usuario>
+DB_URL=jdbc:mysql://<host>:<port>/<database>  
+DB_USERNAME=<usuario>  
 DB_PASSWORD=<contraseña>
 Ejecuta el proyecto desde tu IDE o con Maven:
 
@@ -47,9 +52,13 @@ Código
 http://localhost:4200
 🔗 Endpoints principales
 GET /restaurante → Listar restaurantes
+
 POST /restaurante → Crear restaurante
+
 GET /restaurante/{id} → Obtener restaurante por ID
+
 PUT /restaurante/{id} → Actualizar restaurante
+
 DELETE /restaurante/{id} → Eliminar restaurante
 
 🛡️ Seguridad
