@@ -1,0 +1,20 @@
+
+@if (restaurante) {
+  <div class="container mt-4">
+    <h3 class="mb-3">¿Eliminar restaurante?</h3>
+    <p><strong>Nombre:</strong> {{ restaurante.nombre }}</p>
+    <p><strong>Dirección:</strong> {{ restaurante.direccion }}</p>
+
+    <button class="btn btn-danger" (click)="eliminarRestaurante()">Eliminar</button>
+    <a class="btn btn-secondary ms-2" [routerLink]="['/inicio']">Cancelar</a>
+  </div>
+}
+
+@if (mostrarPopup) {
+  <div class="popup-backdrop">
+    <div class="popup">
+      <h4 class="popup-header">¡Restaurante eliminado!</h4>
+      <p>Redirigiendo en {{ redirectSeconds }} segundos...</p>
+    </div>
+  </div>
+}

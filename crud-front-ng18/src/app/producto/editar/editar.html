@@ -1,0 +1,79 @@
+
+
+@if (restaurante) {
+    <p class="text-muted">Datos cargados: {{ restaurante | json }}</p>
+
+    <form #form="ngForm" (ngSubmit)="actualizarRestaurante()" class="container mt-4">
+      <h3 class="mb-4 text-center">Editar Restaurante</h3>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label">Nombres:</label>
+          <input type="text" [(ngModel)]="restaurante.nombre" name="nombre" class="form-control" required />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Dirección:</label>
+          <input type="text" [(ngModel)]="restaurante.direccion" name="direccion" class="form-control" required />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label class="form-label">Precio Medio (€):</label>
+          <input type="number" [(ngModel)]="restaurante.precioMedio" name="precioMedio" class="form-control" />
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Latitud:</label>
+          <input type="number" [(ngModel)]="restaurante.latitud" name="latitud" class="form-control" />
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Longitud:</label>
+          <input type="number" [(ngModel)]="restaurante.longitud" name="longitud" class="form-control" />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label">Barrio:</label>
+          <input type="text" [(ngModel)]="restaurante.barrio" name="barrio" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Ficha Google:</label>
+          <input type="text" [(ngModel)]="restaurante.fichaGoogle" name="fichaGoogle" class="form-control" />
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Sitio Web:</label>
+        <input type="text" [(ngModel)]="restaurante.web" name="web" class="form-control" />
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label class="form-label">Especialidad 1:</label>
+          <input type="text" [(ngModel)]="restaurante.especialidad1" name="especialidad1" class="form-control" />
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Especialidad 2:</label>
+          <input type="text" [(ngModel)]="restaurante.especialidad2" name="especialidad2" class="form-control" />
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Especialidad 3:</label>
+          <input type="text" [(ngModel)]="restaurante.especialidad3" name="especialidad3" class="form-control" />
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-success px-5">Actualizar Restaurante</button>
+      </div>
+    </form>
+  }
+
+@if (mostrarPopup) {
+  <div class="popup-backdrop">
+    <div class="popup">
+      <h4 class="popup-header">¡Restaurante actualizado!</h4>
+      <p>Redirigiendo en {{ redirectSeconds }} segundos...</p>
+    </div>
+  </div>
+}

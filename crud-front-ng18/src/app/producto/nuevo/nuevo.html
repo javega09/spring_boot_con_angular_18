@@ -1,0 +1,64 @@
+<form (ngSubmit)="guardarRestaurante()" class="container mt-4">
+  <h3 class="mb-4 text-center">Crear Restaurante</h3>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label class="form-label">Nombre:</label>
+      <input type="text" name="nombre" [(ngModel)]="restaurante.nombre" [ngModelOptions]="{ standalone: true }" class="form-control" required />
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Dirección:</label>
+      <input type="text" name="direccion" [(ngModel)]="restaurante.direccion" [ngModelOptions]="{ standalone: true }" class="form-control" required />
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <label class="form-label">Precio Medio (€):</label>
+      <input type="number" name="precioMedio" [(ngModel)]="restaurante.precioMedio" [ngModelOptions]="{ standalone: true }" class="form-control" required />
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Latitud:</label>
+      <input type="number" name="latitud" [(ngModel)]="restaurante.latitud" [ngModelOptions]="{ standalone: true }" class="form-control" required />
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Longitud:</label>
+      <input type="number" name="longitud" [(ngModel)]="restaurante.longitud" [ngModelOptions]="{ standalone: true }" class="form-control" required />
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label class="form-label">Barrio:</label>
+      <input type="text" name="barrio" [(ngModel)]="restaurante.barrio" [ngModelOptions]="{ standalone: true }" class="form-control" />
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Ficha Google:</label>
+      <input type="text" name="fichaGoogle" [(ngModel)]="restaurante.fichaGoogle" [ngModelOptions]="{ standalone: true }" class="form-control" />
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Sitio Web:</label>
+    <input type="text" name="web" [(ngModel)]="restaurante.web" [ngModelOptions]="{ standalone: true }" class="form-control" />
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <label class="form-label">Especialidad 1:</label>
+      <input type="text" name="especialidad1" [(ngModel)]="restaurante.especialidad1" [ngModelOptions]="{ standalone: true }" class="form-control" />
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Especialidad 2:</label>
+      <input type="text" name="especialidad2" [(ngModel)]="restaurante.especialidad2" [ngModelOptions]="{ standalone: true }" class="form-control" />
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Especialidad 3:</label>
+      <input type="text" name="especialidad3" [(ngModel)]="restaurante.especialidad3" [ngModelOptions]="{ standalone: true }" class="form-control" />
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary px-5">Crear Restaurante</button>
+  </div>
+</form>

@@ -1,0 +1,53 @@
+.navbar-productos {
+  background-color: #343a40;
+  padding: 1rem;
+}
+
+.navbar-productos ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;              /* Esto alinea los <li> en horizontal */
+  gap: 2.5rem;                /* Espacio entre enlaces */
+  justify-content: left;   /* Centra el nav horizontalmente */
+  align-items: center;
+}
+
+.navbar-productos li {
+  display: block;             /* No uses inline aquí, flex ya lo gestiona */
+}
+
+.navbar-productos a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+/* Hover general */
+.navbar-productos a:hover {
+  color: #ffc107;
+}
+
+/* Enlace activo */
+.navbar-productos a.activo {
+  color: #17a2b8;
+}
+
+/* Subrayado del activo */
+.navbar-productos a.activo::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #17a2b8;
+}
+
+/* Hover sobre activo */
+.navbar-productos a.activo:hover {
+  color: #138496;
+}

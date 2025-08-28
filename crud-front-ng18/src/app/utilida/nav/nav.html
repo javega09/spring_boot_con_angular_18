@@ -1,0 +1,29 @@
+<div class="inicio-container p-4 bg-light rounded shadow">
+  <h1 class="mb-3">Bienvenido a la Gestión de Restaurantes</h1>
+  <p class="mb-4">Desde aquí puedes acceder a las diferentes funcionalidades del sistema.</p>
+
+  <div class="estado-ruta alert alert-info text-center">
+    @if (rutaActual.includes('/inicio')) {
+      <h4>📋 Estás en el inicio</h4>
+    } @else if (rutaActual.includes('/producto/nuevo')) {
+      <h4>🆕 Estás creando un nuevo producto</h4>
+    } @else if (rutaActual.includes('/producto/listar')) {
+      <h4>📋 Listado de productos</h4>
+    } @else if (rutaActual.includes('/producto/detalle')) {
+      <h4>🔍 Detalle del producto</h4>
+    } @else if (rutaActual.includes('/producto/editar')) {
+      <h4>✏️ Editando producto</h4>
+    }
+  </div>
+</div>
+
+
+<nav class="navbar-productos">
+  <ul>
+    <li><a [routerLink]="['/inicio']">⬅️ Volver al inicio</a></li>
+    <li><a [routerLink]="['/producto/nuevo']">🆕 Nuevo producto</a></li>
+    <li><a [routerLink]="['/producto/listar']">📋 Listar productos</a></li>
+    <li><a [routerLink]="['/producto/detalle',5]">🔍 Detalle</a></li>
+    <li><a [routerLink]="['/producto/editar',6]">✏️ Editar</a></li>
+  </ul>
+</nav>
